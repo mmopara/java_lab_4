@@ -24,14 +24,14 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int element;
-        boolean czyDobrze = true;
+        boolean sprawdzenie = true;
 
 
         String[] gry = {"lol", "cs", "fifa", "wow", "god of war", "rdr2"};
         System.out.println("Elementy tablicy to: " + Arrays.toString(gry));
         System.out.println("Wpisz numer indexu tablicy, aby wyswietlic element:");
 
-        while(czyDobrze) {
+        while(sprawdzenie) {
             try {
                 element = Integer.parseInt(sc.next());
                 System.out.println("Element z tym indexem to: " + gry[element]);
@@ -57,39 +57,40 @@ public class Main {
             System.out.println(slowo.length());
         }
         catch (NullPointerException e){
-            System.out.println("Przyklad NullPointerException, slowo nie ma wartosci");
+            System.out.println("NullPointerException brak wartosci");
         }
 
         int wynik;
         try{
-            wynik = 132/0;
+            wynik = 382/0;
             System.out.println(wynik);
         }
         catch (ArithmeticException e){
-            System.out.println("Przyklad ArithmeticException, you cannot " + e.getMessage());
+            System.out.println("ArithmeticException " + e.getMessage());
         }
 
 
         int[] tab = {97, 46, 69, 10, 12, 225, 26};
-        System.out.println("Elementy tablicy to: " + Arrays.toString(tab));
-        System.out.println("Wpisz numer indexu tablicy, aby wyswietlic element:");
+        System.out.println("Podaj numer indeksu: ");
+        System.out.println("Ten element to: " + Arrays.toString(tab));
+
         try {
             element = Integer.parseInt(sc.next());
-            System.out.println("Element z tym indexem to: " + tab[element]);
+            System.out.println("Element z tym numerem : " + tab[element]);
         }
         catch(ArrayIndexOutOfBoundsException e) {
-            System.out.println("Numer indexu jest nie prawidlowy");
+            System.out.println("Niepoprawny numer indeksu");
             System.out.println("Wprowadz numer od  0 do " + (tab.length-1));
         }
         catch (NumberFormatException e) {
-            System.out.println("Blad, wprowadzony znak nie jest cyfra!");
+            System.out.println("Musisz podać cyfrę");
             System.out.println("Wprowadz cyfre od 0 do " + (tab.length-1));
         }
         catch (NullPointerException e) {
-            System.out.println("Bledna wartosc");
+            System.out.println("Wartosc niepoprawna");
             System.out.println("Wprowadz cyfre od 0 do " + (tab.length-1));
         } finally {
-            System.out.println("Koniec kodu.");
+            System.out.println("Koniec.");
         }
 
     }
