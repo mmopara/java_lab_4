@@ -1,14 +1,51 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
+
+
+
     public static void main(String[] args) {
+        Student student = new Student();
+        Pracownik pracownik = new Pracownik();
+        ((PracownikI) pracownik).wymiarEtatu(1.5);
+        ((StudentI) student).semestr(2);
+        Student student2 = new Student();
+        Student student3 = new Student();
+        student2.toString();
+        student3.toString();
+
+
+        Pracownik pracownik2 = new Pracownik();
+        Pracownik pracownik3=new Pracownik();
+        pracownik2.toString();
+        pracownik3.toString();
+        pracownik.wymiarEtatu(1);
+
+        List<PracownikI> listaPracownikow=new ArrayList<>();
+
+        listaPracownikow.add(pracownik);
+        listaPracownikow.add(pracownik);
+        listaPracownikow.add(pracownik2);
+        listaPracownikow.add(pracownik3);
+
+        for (PracownikI item:listaPracownikow
+        ) {
+            System.out.println(item.toString());
+
+        }
+
+
+    }
+}
+
+
 
         /* zad.1
         a) napisać interfejs CzlowiekI
         b) zadeklarować 2 metody
-
         c) napisać interfejs StudentI który dziedziczy po interfejsie CzlowiekI
         d) zadeklarować 3 metody
-
         e) napisać interfejs PracownikI który dziedziczy po interfejsie CzlowiekI
         f) zadeklarować 3 metody
          */
@@ -38,5 +75,3 @@ public class Main {
         Stworzyć klasę która będzie implementować 2 lub 3 interfejsy następnie będzie
         dziedziczona przez inną klasę
         */
-    }
-}
