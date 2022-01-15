@@ -34,7 +34,7 @@ public class Main {
         Dom B = new Dom();
 
         B.powierzchnia(42);
-        B.adresBudynku("ul. Piwna 38");
+        B.adresBudynku("ul. Orłowska 11");
         B.liczbaOkien(7);
         B.kolorDomu(KolorEnum.SZARY);
         B.opis("blok",7);
@@ -45,7 +45,7 @@ public class Main {
 
         Budynek C = new Dom();
         C.powierzchnia(45.5);
-        C.adresBudynku("ul. Srebrna 45");
+        C.adresBudynku("ul. Sztormowa 8");
         C.liczbaOkien(5);
         C.kolorDomu(KolorEnum.CZERWONY);
         C.opis("kamienica",4);
